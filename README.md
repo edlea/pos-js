@@ -37,6 +37,12 @@ for (i in taggedWords) {
 tagger.extendLexicon({'Obama': ['NNP']});
 tagger.tag(['Mr', 'Obama']);
 // --> [[ 'Mr', 'NNP' ], [ 'Obama', 'NNP' ]]
+tagger.extendLexicon({'access': ['VB']}, true);
+tagger.tag(['access']);
+// --> [[ 'access', 'VB' ]]
+
+// extend the lexicon, overwrite existing definitions
+
 ```
 
 ACKNOWLEDGEMENTS:
@@ -60,16 +66,16 @@ TAGS:
     NNP Proper noun, sing.      Edinburgh
     NNPS Proper noun, plural    Smiths
     NNS Noun, plural            dogs
-    POS Possessive ending       Õs
+    POS Possessive ending       ï¿½s
     PDT Predeterminer           all, both
-    PP$ Possessive pronoun      my,oneÕs
+    PP$ Possessive pronoun      my,oneï¿½s
     PRP Personal pronoun         I,you,she
     RB Adverb                   quickly
     RBR Adverb, comparative     faster
     RBS Adverb, superlative     fastest
     RP Particle                 up,off
     SYM Symbol                  +,%,&
-    TO ÒtoÓ                     to
+    TO ï¿½toï¿½                     to
     UH Interjection             oh, oops
     VB verb, base form          eat
     VBD verb, past tense        ate
@@ -83,7 +89,7 @@ TAGS:
     WRB Wh-adverb               how,where
     , Comma                     ,
     . Sent-final punct          . ! ?
-    : Mid-sent punct.           : ; Ñ
+    : Mid-sent punct.           : ; ï¿½
     $ Dollar sign               $
     # Pound sign                #
     " quote                     "

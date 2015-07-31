@@ -124,9 +124,9 @@ POSTagger.prototype.prettyPrint = function(taggedWords) {
     }
 }
 
-POSTagger.prototype.extendLexicon = function(lexicon) {
+POSTagger.prototype.extendLexicon = function(lexicon, overwrite) {
   for (var word in lexicon) {
-    if (!this.lexicon.hasOwnProperty(word)) {
+    if (overwrite || !this.lexicon.hasOwnProperty(word)) {
       this.lexicon[word] = lexicon[word];
     }
   }
