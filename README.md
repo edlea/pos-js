@@ -37,11 +37,11 @@ for (i in taggedWords) {
 tagger.extendLexicon({'Obama': ['NNP']});
 tagger.tag(['Mr', 'Obama']);
 // --> [[ 'Mr', 'NNP' ], [ 'Obama', 'NNP' ]]
+
+// extend the lexicon, overwrite existing definitions
 tagger.extendLexicon({'access': ['VB']}, true);
 tagger.tag(['access']);
 // --> [[ 'access', 'VB' ]]
-
-// extend the lexicon, overwrite existing definitions
 
 ```
 
